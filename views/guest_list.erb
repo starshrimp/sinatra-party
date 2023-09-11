@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party-Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- You can link to an external CSS file or include styles here -->
+</head>
+<body>
+    <header>
+        <h1>It's time to party!</h1>
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/guest_list">Guest List</a></li>                
+                <li><a href="/form">Add a guest</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <h3>Guest List</h3>
+      <ul>
+        <% guests.each do |guest| %>
+          <li>Name: <%= guest.name %>, Friends: <%= guest.friends %>, Time: <%= guest.time %></li>
+        <% end %>
+      </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sarah</p>
+    </footer>
+</body>
+</html>
+
